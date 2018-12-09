@@ -8,6 +8,8 @@ public class Nollaa implements Komento {
     private final IO laskinIO;
     private final Sovelluslogiikka sovellus;
 
+    private int edellinenTulos;
+
     public Nollaa(
         IO laskinIO,
         Sovelluslogiikka sovellus
@@ -18,13 +20,22 @@ public class Nollaa implements Komento {
 
     @Override
     public void suorita() {
+        edellinenTulos = laskinIO.lueTuloskentta();
+
         sovellus.nollaa();
-        laskinIO.paivitaSyotekentta("");
-        laskinIO.paivitaTuloskentta("" + sovellus.tulos());
+
+        uusiTilanne(sovellus.tulos());
     }
 
     @Override
     public void peru() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        sovellus.setTulos(edellinenTulos);
+
+        uusiTilanne(edellinenTulos);
+    }
+
+    private void uusiTilanne(int syoteArvo) {
+        laskinIO.paivitaSyotekentta("");
+        laskinIO.paivitaTuloskentta("" + syoteArvo);
     }
 }
