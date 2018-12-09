@@ -1,3 +1,4 @@
+
 package statistics;
 
 public class Player implements Comparable<Player> {
@@ -13,7 +14,7 @@ public class Player implements Comparable<Player> {
         this.goals = goals;
         this.assists = assists;
     }
-        
+
     public int getAssists() {
         return assists;
     }
@@ -51,7 +52,7 @@ public class Player implements Comparable<Player> {
     }
 
     @Override
-    public String toString() {      
+    public String toString() {
         return String.format("%-20s",name) + " " + String.format("%-12s",team) + " " + String.format("%2d",goals) + " + " 
                 + String.format("%2d",assists) + " = " + getPoints();
     }
