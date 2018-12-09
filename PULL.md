@@ -1,3 +1,3 @@
 # Tehtävän 6 pull request -linkki
 
-[Pull Request](htts://github.com/anonOstrich/ohtu-miniprojekti/pull/38)
+[Pull Request](https://github.com/anonOstrich/ohtu-miniprojekti/pull/38)
