@@ -1,3 +1,3 @@
-# ohtu-viikko6ohtu-viikko5
+# ohtu-viikko6
 
 Ohjelmistotuotanto 2018 viikon 6 palautusrepositorio
